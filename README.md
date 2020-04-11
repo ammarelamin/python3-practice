@@ -1,5 +1,6 @@
 # python3-practice
 You can use this python file to practice, refresh your knowledge or learn python3,,
+# this script starting from logical statements and doesn't contain variables and data types
 # How to use: 
 just uncomment the output you want to see, and don't forget to comment it back.. 
 Change anything you want in the examples to see different outputs.. 
