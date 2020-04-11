@@ -1,12 +1,19 @@
 # You can use this python file to practice, refresh your knowledge or learn python3
 # How to use: just uncomment the output you want to see, and don't forget to comment it back
+# Change anything you want in the examples to see different outputs
 # Titles and head lines are surrounded by $ $, keep them commented
-# Spaces between different examples
-# Change anything you want in the example to check different outputs
+# empty lines between different examples
 # Be careful on commenting and uncommenting lines to avoid errors
 # Best of luck
 
 # -----------------------------------------------------------------------------------------------
+
+# $ User input $
+
+# name = input("Enter your name : ")
+# print ("you intered " + name)
+
+# ---------------------------------------------------------------------
 
 # $ String Formatting "F-String" $
 
@@ -18,16 +25,9 @@
 # rounded_miles = round(miles, 2) # rounding the decimals to 2 
 # print (f"rounded miles are {rounded_miles}")
 
-# ---------------------------------------------------------------------
-
-# $ User input $
-
-# name = input("Enter your name : ")
-# print ("you intered " + name)
-
 # ---------------------------------------------------------------------------
 
-# $ If statements $ if, elif and else
+# $ If statements $ if, elif and else $
 
 # color = input("What is your favourite color? ")
 # if color == "Blue":
@@ -191,61 +191,65 @@
 
 # --------------------------------------------------------------------------
 
-# List Methods
+# $ List Methods $
 
-# Append 
+chars = ['a', 'b', 'c', 'a'] # will be used in all methods, so keep it uncommented
+
+# -Append method
 # chars.append('d') # takes only one argument
 # print (chars)
 
-# Extend
-# chars.extend(['e','f'])
+# -Extend method
+# chars.extend(['e','f']) # takes many arguments
 # print (chars)
 
-# Inser
-# chars.insert(2,10)
+# -Inser method
+# chars.insert(2,10) # 2 arguments, in what index to insert! and what to insert!
 # print (chars)
 
-# Clear
-# chars.clear()
+# -Clear method
+# chars.clear() # remove all the elements of the list
 # print (chars)
 
-# Pop
-# chars.pop(1)
+# -Pop method
+# chars.pop()
 # last_char = chars.pop() # returns the removed item, we can store it in other variable
-# print (chars)
-# print (last_char)
+# print(chars)
+# print(last_char)
 
-# Remove
+# -Remove method
 # chars.remove('b')
 # print (chars)
 
-# Index
+# -Index method
 # chars.index('c') # returns the index of a given item
 # chars.index('a', 1) # find the index of 'a' after index 1 
 # chars.index('a', 0, 2) # find the index of 'a' starting from index 0 to index 2 "start and end indecies" 
 # print (chars.index('c'))
 
-# Count
-# chars.count('c')
-# print (chars.count('a')) 
+# -Count method
+# print(chars.count('c')) # count the how many "c" in the list
+# print(chars.count('a')) 
 
-# Reverse
+# -Reverse method
 # chars.reverse()
-# print (chars) 
+# print(chars) 
 
-# sort  # in strings, Capital case comes before lower case
+# -sort method # in strings, Capital case comes before lower case
 # numbers = [10,3,6,8,1,3,7,20]
 # numbers.sort()
-# print (numbers) 
+# print(numbers) 
 
-# Join
+# -Join method
 # joined_items = ", ".join(chars)
 # print (joined_items) 
 
 # --------------------------------------------------------------------
 
-# Slicing 
-# sliced_numbers = numbers[2:7]
+# $ Slicing $
+
+# numbers = [10,3,6,8,1,3,7,20]
+# sliced_numbers = numbers[2:7] # take part of the list, from index 2 to 7
 # sliced_numbers = numbers[2:] # to the end
 # print(sliced_numbers)
 
@@ -277,18 +281,27 @@
 # friends[0], friends[1] = friends[1], friends[0]
 # print(friends)
 
-# List Comprehension
+# ---------------------------------------------------------------------------------------
+
+# $ List Comprehension $
+
+# numbers = [10,3,6,8,1,3,7,20]
 
 # manipulated_list = [x*10 for x in numbers]
 # print(manipulated_list)
 
+# names = ["ahmed", "mohammed", "ali"]
 # new_names = [name[0].upper() for name in names]
 # print(new_names)
 
 # string_numbers = [str(num) for num in numbers] # converting list of numbers to strings
 # print(string_numbers)
 
+# -------------------------------------------------------------------------------------------
+
 # List Comprehension with Conditional Logic
+
+# numbers = [10,3,6,8,1,3,7,20]
 
 # evens = [num for num in numbers if num % 2 == 0]
 # print(evens)
@@ -308,33 +321,34 @@
 # print(nested_list[2][2])
 
 # for l in nested_list:
-#     for value in l:
+#     for value in l: # nested lists need 2 for loops to go inside of its elements
 #         print(value)
 
 # [[print(value) for value in l] for l in nested_list] # Nested list conprehension
 
-# board = [[num for num in range(1,4)] for val in range(1,3)]
+# board = [[num for num in range(1,4)] for val in range(1,3)] # creating nested list 
 # print(board)
 
 # xo_list = [["X" if num % 2 != 0 else "O" for num in range(1,5)]for val in range(1,4)]
 # print(xo_list)
 
-# ////////Dictionaries/////
+# ---------------------------------------------------------------------------------------
 
-# Examples
+# $ Dictionaries $
 
-# student = {"name": "Ahmed", "age": 20, "is_graduate": False, 11:"fav num"}
+# student = {"name": "Ahmed", "age": 20, "is_graduate": False, 11:"fav num"} # keep it uncommented
+
 # print(student)
 
 # cat = dict(name = 'catty', age = 2) # another way of creating a dictionary using 'dict'
 # print(cat)
 
-# accessing data inside dictionary
+# -accessing data inside dictionary
 
 # student_name = student["name"]
 # print(student_name)
 
-# itrating over dictionaries
+# -itrating over dictionaries
 
 # for value in student.values(): # print only the values of the dictionary,, "dict_name.values()"
 #     print(value)
@@ -349,7 +363,7 @@
 # for key,value in student.items(): # printing using f-string
 #     print(f" Key is {key} and Value is {value}")
 
-# using 'in' with dictionaries.. "testing existance of certain key or value in dictionary"
+# -using 'in' with dictionaries.. "testing existance of certain key or value in dictionary"
 
 # testing the existance of key:
 # if "name" in student:
@@ -357,31 +371,31 @@
 # if "city" in student: # "not in" can be used too
 #     print("False")
 
-# testing the existance of value:
+# -testing the existance of value:
 # if "Ahmed" in student.values():
 #     print("True")
 # if "Mohammed" in student.values():
 #     print("False")
 
-# testing existance of key by student.keys()!!
+# -testing existance of key by student.keys()!!
 # if "name" in student.keys():
 #     print("True")   # yes it works, but no need, .keys() is already the default, just dict_name is enough
 
 # ---------------------------------------------------------------------------------------
 
-# Dictionary Methods
+# $Dictionary Methods$
 
-# clear
+# -clear method
 # student.clear()
 # print(student)
 
-# copy
+# -copy method
 # student_copy = student.copy()
 # print(student_copy)
 # student_copy is student # False, because we store the copied on in different memory 'reference', but they are equal "="
 # student_copy == student # True
 
-# fromkeys
+# -fromkeys method
 # new_user = {}.fromkeys(['name', 'age', 'email', 'score'], 'unknown') # or you can use dict.fromkeys([])
 # # print(new_user)
 
@@ -389,28 +403,26 @@
 # print(fromkey_user)
 # print(new_user)
 
-# get
+# -get method
 # get_stu_name = student.get("name")
 # print(get_stu_name)
 # get_stu_city = student.get("city")
 # print(get_stu_city) # output is None, instead of keyError
 
-# pop method
+# -pop method
 # poped_name = student.pop('name')
 # print(poped_name)
 # print(student)
 # poped_city = student.pop('city')
 # print(poped_city) # keyError
 
-# popitem method
-
+# -popitem method
 # popeditem = student.popitem()
 # print(popeditem)
 # popeditem_name = student.popitem('name')
 # print(popeditem_name) # TypeError
 
-# update method
-
+# -update method
 # first = dict(a=1, b=2, c=3, d=4)
 # second = {}
 # third = {'z':100}
@@ -423,7 +435,7 @@
 
 # --------------------------------------------------------------------------
 
-# Nested Dictionaries and Lists
+# $ Nested Dictionaries and Lists $
 
 # playlist = {"title": "Favourites",
 #             "author": "John",
@@ -437,12 +449,13 @@
 # total_duration = 0
 # for song in playlist["songs"]:
 #     total_duration += song["duration"]
-# print(total_duration)
+# print(total_duration) # the summatoin of all durations
 
 # ------------------------------------------------------------------
 
-# Dictionary Comprehension
+# $ Dictionary Comprehension $
 
+# first = dict(a=1, b=2, c=3, d=4)
 # squared_numbers = {key: value ** 2 for key,value in first.items()}
 # print (squared_numbers)
 
@@ -460,24 +473,26 @@
 
 # -----------------------------------------------------------------------
 
-# Tuples and Sets
+# $ Tuples and Sets $
 
-# Tuples
+# $ Tuples $
 
 x = (1, 2 , 3, 3, 3, 5)
 # print(3 in x) # True
-# x[0] = 4 # trying to change!! TypeError: 'tuple' object doesn't support item assignment
+# x[0] = 4 # trying to change!! TypeError: 'tuple' object doesn't support item assignment, cus tuples are unchangable
 # print(x[2])
 
-# y = tuple((1, 'a', 'name'))
+# y = tuple((1, 'a', 'name')) # creating tuple using "tuple" keyword
 # print(y)
 
-# tuples can be used as keys in dictionary
+# -tuples can be used as keys in dictionary
 # location = {
 #     (23.654, 447.968): "Office 1",
 #     (10.654, 217.968): "Office 2",
 #     (6.654, 417.968): "Office 3",
 # }
+# print(location)
+
 # loc = {
 #     [23.654, 447.968], "office 1", # using list as a key in dictionary!?
 #     [10.654, 217.968], "Office 2",
@@ -493,24 +508,21 @@ x = (1, 2 , 3, 3, 3, 5)
 
 # ---------------------------------------------------------------------------------
 
-# Tuple Methods
+# $ Tuple Methods $
 
-# Count method
-
+# -Count method
 # print(x.count(3))
 
-# Index method
-
+# -Index method
 # print(x.index(1))
 
-# nested tuples are same as nested lists
-
-nested_tuple = ('a', 'b', (8,9), 'c')
+# -nested tuples are same as nested lists
+# nested_tuple = ('a', 'b', (8,9), 'c')
 # print(nested_tuple)
 # print(nested_tuple[2])
 # print(nested_tuple[2][0])
 
-# tuple slicing is same as list slicing too
+# -tuple slicing is same as list slicing too
 
 # sliced_tuple = nested_tuple[1:3]
 # sliced_tuple = nested_tuple[0:3:2]
@@ -518,14 +530,16 @@ nested_tuple = ('a', 'b', (8,9), 'c')
 
 # ----------------------------------------------------------------------------------
 
-# Sets
+# $ Sets $
 
 s = {1, 2, 3, 4, 5, 6, 7, 8} # creating a set
+
 # print(s)
-t = set({'x', 'y', 'z'})
+
+# t = set({'x', 'y', 'z'}) # another way for creating set
 # print(t)
 
-# accessing a set!!?
+# -accessing a set!!?
 # print(s[0]) # TypeError: 'set' object does not support indexing
 # indexing is not supported, but you can test if an element is in a set
 # print(4 in s) # True
@@ -536,37 +550,33 @@ t = set({'x', 'y', 'z'})
 
 # cities = ["Khartoum", "Madani", "Alobaied", "Algadarif", "Khartoum", "Sinar", "Aldamazeen", "Madani", "Shandi"]
 # cities_set = set(cities) # converting list to set
-# print(cities_set ) # notice there is no more duplications
+# print(cities_set ) # notice there is no more duplications, sets don't contains duplicated items
 # print(list(cities_set)) # return it back to list, with unique cities, no duplications
 
 # --------------------------------------------------------------------------------------------
 
-# Set Methods
+# $ Set Methods $
 
-# add method
-
+# -add method
 # s.add(3.5)
 # print(s)
 
-# remove method
-
+# -remove method
 # s.remove(2)
 # s.remove(5.5) # trying to remove item not in set!! KeyError: 5.5
 # print(s)
 
-# copy method
-
+# -copy method
 # s_copy = s.copy()
 # print(s_copy) 
 
-# clear method
-
+# -clear method
 # s.clear()
 # print(s)
 
 # ------------------------------------------------------------------------------
 
-# Sets Math
+# $ Sets Math $
 
 # math_students = {"kepa", "kante", "mount", "james", "tomori", "kova"}
 # biology_students = {"zouma", "abraham", "kante", "kova", "willian"}
@@ -576,7 +586,7 @@ t = set({'x', 'y', 'z'})
 
 # --------------------------------------------------------------------------------
 
-# Set Comprehension
+# $ Set Comprehension $
 
 # s_co = {x * 2 for x in s} # same as list comprehension, notise the prackets
 # print(s_co)
@@ -585,46 +595,46 @@ t = set({'x', 'y', 'z'})
 
 # ------------------------------------------------------------------------------------
 
-# Functions
+# $ Functions $
 
 # def say_something(): # creating function using 'def' stands for define, then the function name
 #     print("something")
 # say_something() # calling the function
 
-# Return key word
+# -Return key word
 
 # def square_of_5():
 #     return 5**2
 # result = square_of_5()
 # print(result)
 
-# from random import random
+# from random import random # importing "random" module to use its methods
 # def coin_flip():
-#     # generate a random number 0-1
-#     r = random()
+#     r = random() # generate a random number 0-1
 #     if r > 0.5:
 #         return "head"
 #     else:
 #         return "tail"
 # print(coin_flip())
 
-# passing parameters to function
+# -passing parameters to function
 
-# def square_of_number(num):
+# def square_of_number(num): # num here is a prameter
 #     return num**2
 # print(square_of_number(6))
 
 # def add(a,b): # passing 2 parameters
 #     return a+b
 
-# def exponent(number, power=2): # passing default parameter
+# def exponent(number, power=2): # passing default parameter "pwoer"
 #     if power:
 #         return number ** power
 #     return number ** 2
 # print(exponent(3,3)) # here, we overwrite the default parameter
 # print(exponent(7)) # here, we use the default parameter
 
-# passing function as a prameter!! you can pass anything as a parameter(functions, lists, dictionaries, strings, booleans)
+# -passing function as a prameter!! you can pass anything as a parameter(functions, lists, dictionaries, strings, booleans)
+
 # def add(a,b):
 #     return a + b
 
@@ -637,7 +647,7 @@ t = set({'x', 'y', 'z'})
 # print(math(1,2)) # 3
 # print(math(2,2, subtract)) # 0
 
-# Keyword Arguments
+# -Keyword Arguments
 
 # def full_name(first="ahmed", last="mohammed"):
 #     return f"your name is {first} {last}"
@@ -646,7 +656,7 @@ t = set({'x', 'y', 'z'})
 
 # ---------------------------------------------------------------------------------------------
 
-# Scope
+# $ Scope $
 
 # instructor = "colt" # global variable, not defined inside the function
 # def say_hallo():
@@ -676,7 +686,7 @@ t = set({'x', 'y', 'z'})
 
 # ---------------------------------------------------------------------------------------
 
-# Documenting Functions
+# $ Documenting Functions $
 
 # def say_hallo():
 #     """ a simple function to print hallo""" # function documentation using triple double quote
@@ -689,7 +699,7 @@ t = set({'x', 'y', 'z'})
 
 # ----------------------------------------------------------------------------------------------
 
-# *args
+# $ *args $
 
 # def sum_all_num(num1,num2,num3): # demo function
 #     return num1 + num2 + num3 
@@ -697,8 +707,8 @@ t = set({'x', 'y', 'z'})
 
 # what if you want to add more numbers!!
 # def all_nums(*args):
-#     print(args)
-# print(all_nums(2,5,7,8,6,9)) # so args is tuple of all passed arguments
+#     print(args) # so args is tuple of all passed arguments
+# print(all_nums(2,5,7,8,6,9)) 
 
 # so, if you want to do sum of nums, you need to loop in the tuple
 # def sum_nums(*args): # you can still add parameters alonside *args
@@ -719,7 +729,7 @@ t = set({'x', 'y', 'z'})
 
 # ----------------------------------------------------------------------------------------
 
-# **kwargs
+# $ **kwargs $
 
 # def test_kwargs(**kwargs):
 #     print(kwargs) # so kwargs is dictionary, not a tuple
@@ -742,7 +752,7 @@ t = set({'x', 'y', 'z'})
 
 # -------------------------------------------------------------------------------------------
 
-# Ordering Parameters # 1- parameters 2- *args 3- default parameters 4- **kwargs
+# $ Ordering Parameters $ # 1- parameters 2- *args 3- default parameters 4- **kwargs
 
 # def display_info(a, b, *args, instructor="colt", **kwargs):
 #     return [a, b, args, instructor, kwargs]
@@ -755,7 +765,7 @@ t = set({'x', 'y', 'z'})
 
 # --------------------------------------------------------------------------------------------
 
-# Tuple Unpacking
+# $ Tuple Unpacking $
 
 # def sum_nums(*args): # same old function
 #     print(args) # check what's inside args
@@ -770,7 +780,7 @@ t = set({'x', 'y', 'z'})
 
 # -------------------------------------------------------------------------------------
 
-# Dictionary Unpacking
+# $ Dictionary Unpacking $
 
 # def display_names(first, second):
 #     print(f"{first} says hi to {second}")
@@ -789,9 +799,9 @@ t = set({'x', 'y', 'z'})
 
 # --------------------------------------------------------------------------------------------
 
-# Built-in Functions
+# $ Built-in Functions $
 
-# Lambda function
+# -Lambda function
 
 # def square(num): # simple function that returns the square of a number
 #     return num * num
@@ -810,7 +820,7 @@ t = set({'x', 'y', 'z'})
 # print(lambda_square.__name__) # has no name
 # print(lambda_exponent.__name__) # has no name
 
-# Map function
+# -Map function
 
 # nums = [1,2,3,4,5,6,7,8]
 # doubles = map(lambda x: x*2, nums)
@@ -831,7 +841,7 @@ t = set({'x', 'y', 'z'})
 # first_names = list(map(lambda n: n["first"], names))
 # print(first_names)
 
-# Filter Function
+# -Filter Function
 
 # l = [10,15,20,25,30,35,40,45]
 # evens = list(filter(lambda y: y%2 == 0, l)) # return only the values that meet the condition "True"
@@ -858,27 +868,27 @@ t = set({'x', 'y', 'z'})
 # lc_not_active = [user for user in users if not len(user["tweets"])] # can be done by list comprehension too! even easier
 # print(lc_not_active)
 
-# compine filters and maps
+# -compine filters and maps
 
 # names = ["ahmed", "amal", "mohammde", "noor", "adil"]
 # instructors = list(map(lambda name: f"your instructor is {name}",
 #     filter(lambda n: len(n)<5, names)))
 # print(instructors)
 
-# All Function: all()
+# -All Function: all()
 
 # all([0,1,2,3,4]) # False, cuz 0 is falsie
 # all([char for char in "eio" if char in "aeiou"]) # True, all 'eio' letters are in 'aeiou'
 # people = ["Charly", "Chris", "Colt", "Camry"]
 # all([string[0] == 'C' for string in people]) # check if all strings start with 'C', returns True
 
-# Any Function: any()
+# -Any Function: any()
 
 # any([0,1,2,3,4]) # True, cuz 1 is truthy
 # any([x for x in [1,2,3] if x>2]) # True  
 # any([value for value in [1,2,3] if value>5]) # False, cuz all values are falsie  
 
-# Sorted Function: sorted()
+# -Sorted Function: sorted()
 
 # numbers = [2,9,4,88,110,3,90,1000,199,0]
 # print(sorted(numbers))
@@ -906,7 +916,7 @@ t = set({'x', 'y', 'z'})
 #     ]
 # print(sorted(songs, key=lambda song: song["playcounts"]))
 
-# Max and Min Function: max(), min()
+# -Max and Min Function: max(), min()
 
 # print(max(99,12,50,100,1))
 # print(min(99,12,50,100,1))
@@ -930,7 +940,7 @@ t = set({'x', 'y', 'z'})
 # print(min(songs, key=lambda song: song["playcounts"])) # minimum playcounts
 # print(min(songs, key=lambda song: song["playcounts"])["title"]) # if you want the title of the minimum playcounts song
 
-# Reversed Function: reversed()
+# -Reversed Function: reversed()
 
 # nums = [1,2,3,4]
 # print(list(reversed(nums)))
@@ -940,7 +950,7 @@ t = set({'x', 'y', 'z'})
 # print("hallo"[::-1]) # slicing!! can make reversed string too, but for only lists, not all iterators support sclices
 # print(''.join(list(reversed("hallo")))) # if you insist in using reversed
 
-# Length Function: len()
+# -Length Function: len()
 
 # len("awesome")
 # len([1,2,3,4,5])
@@ -949,19 +959,19 @@ t = set({'x', 'y', 'z'})
 # len({"a":1, "b":2})
 # print("check".__len__()) # len() behind the scenes calls .__len__()
 
-# Absolute Function: abs()
+# -Absolute Function: abs()
 
 # print(abs(-5)) # 5
 # print(abs(5)) # 5
 # print(abs(-2.444)) # 5
 
-# Summation Function: sum()
+# -Summation Function: sum()
 
 # print(sum([1,2,3,4]))
 # print(sum([1,2,3,4], 10)) # 10 is start, like start counting from 10, its optional, by default its 0
 # print(sum([1,2,3,4], -10)) # 0, start counting from -10
 
-# Round Function: round()
+# -Round Function: round()
 
 # print(round(2.2)) # 2
 # print(round(2.5)) # 2
@@ -969,7 +979,7 @@ t = set({'x', 'y', 'z'})
 # print(round(2.21574369, 2)) # 2.21, you can specify the number of digits you want to round to
 # print(round(4.21574369, None)) # None sets round to the default, which is, rount to nearest integer
 
-# Zip Function: zip()
+# -Zip Function: zip()
 
 # zipped_test = zip(["a", "b", "c"], [1,2,3,4,5])
 # print(list(zipped_test)) # convert it to a list
@@ -984,6 +994,7 @@ t = set({'x', 'y', 'z'})
 # print(list(zip(*five_by_two))) # unpacking, 2 individual lists
 
 # complex example
+
 # midterm = [80, 91, 78]
 # finals = [98, 89, 53]
 # students = ["Dan", "Ang", "Kate"]
@@ -1006,7 +1017,7 @@ t = set({'x', 'y', 'z'})
 
 # ----------------------------------------------------------------------------------------------
 
-# Debugging
+# $ Debugging $
 
 # Common Types of Error in python:
     # * SyntaxError
@@ -1038,9 +1049,9 @@ t = set({'x', 'y', 'z'})
 
 # ------------------------------------------------------------------------------------------
 
-# Raise your own Errors # using "raise" keyword
+# $ Raise your own Errors # using "raise" keyword $
 
-# raise ValueError("Invalid Value")
+# -raise ValueError("Invalid Value")
 
 # def colorize(text, color):
 #     colors = ("red", "white", "black", "blue")
@@ -1055,7 +1066,7 @@ t = set({'x', 'y', 'z'})
 
 # ------------------------------------------------------------------------------------
 
-# Handle Errors
+# $ Handle Errors $
 
 # try:
 #     foober
@@ -1073,7 +1084,7 @@ t = set({'x', 'y', 'z'})
 
 # -----------------------------------------------------------------------------------------------------
 
-# Try Except Else and Finally
+# $ Try, Except, Else and Finally $
 
 # try:
 #     num = int(input("enter a number: ")) 
@@ -1108,3 +1119,592 @@ t = set({'x', 'y', 'z'})
 # divide(1,2)
 # divide(1,0)
 # divide(1,"q")
+
+# ---------------------------------------------------------------------------------------------
+
+# $ Modules $
+
+# -Built-in Modules
+
+# import random
+# print(random.choice(["banana", "tomato","orange","mango"])) # choice is method in random
+# print(random.shuffle(["banana", "tomato","orange","mango"])) # shuffle is method too
+
+# import random as rand # sometimes, you import long-named module, you can give it alias using "as"
+# print(rand.choice(["banana", "tomato","orange","mango"])) # then you refer to the alias "rand"
+# print(rand.shuffle(["banana", "tomato","orange","mango"]))
+
+# from random import choice, randint # use "from" to import parts of a module
+# print(choice(["banana", "tomato","orange","mango"]))  # random is no longer a thing in this file, so delete it and use the function only
+# print(randint(1,10))  # random is no longer a thing in this file, so delete it and use the function only
+# print(shuffle(["banana", "tomato","orange","mango"])) # using shuffle gives error, cus it wasn't imported
+
+# from random import choice as c, randint as magic_num # import parts of the module and give it alias
+# print(c(["banana", "tomato","orange","mango"])) 
+# print(magic_num(1,10)) 
+
+# ----------------------------------------------------------------------------------------------------------
+
+# -External Modules # modules that downloaded from the internet, see "pypi.python.org"
+
+# import termcolor # make sure you download it first, open terminal, run "python3 -m pip install termcolor"
+# text = termcolor.colored("Hallo World!", color="magenta", on_color="on_cyan", attrs=["blink"])
+# print(text)
+
+# -----------------------------------------------------------------------------------------
+
+# starting from here, empty line doesn't mean end of example, some empty lines used between functions, so be careful on uncommenting
+
+# $ Object Oriented Programming OOP $
+
+# Defining the simplest possible class
+# class User:
+#     pass
+# user1 = User()
+# print(user1)
+# print(type(user1))
+
+# class User:
+#     def __init__(self): # almost every time you need to define __init__ method in a class 
+#         print("A new user has been made") # you don't usualy print here, but you add your data, print here to illustrate the functionality
+
+# user1 = User() # __init__ method is called automatically when creating object from class
+# user2 = User()
+# user3 = User()
+
+# class User:
+#     def __init__(self, first):
+#         self.name = first
+# user1 = User("Joe")
+# user2 = User("Peter")
+# print(user1.name) # to access specific attribute of instance, run: instance.attribute_name
+
+# class User:
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self.age = age
+# user1 = User("Joe", "Barton", 30)
+# user2 = User("Peter", "Parker", 40)
+# print(user1.age, user1.first)
+# print(user1.first, user1.last)
+
+# ------------------------------------------------------------------------------------
+
+# $ Underscores "Dunder" methods, Name Mangling $
+
+# class person:
+#     def __init__(self):
+#         self.name = "Joe"
+#         self._secret = "Use this only inside the class" # private convention, this should be private
+#         self.__msg = "ordinary msg!" # Name Mangling
+
+# p = person()
+# print(p.name)
+# print(p._secret)
+# # print(p.__msg) # AttributeError!! cuz double underscore attributes stores as "_ClassName__AttributeName"
+# print(p._person__msg) # the correct way to call __attribute
+# print(dir(p)) # this print all the methods and attributes of a class
+
+# ---------------------------------------------------------------------------------------------
+
+# $ Instance Methods $
+
+# class person:
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self.age = age
+
+#     def full_name(self): # its an ordinary function, but inside a class its called "Method" 
+#         return f"{self.first} {self.last}"
+
+#     def initails(self):
+#         return f"{self.first[0].upper()}.{self.last[0].upper()}."
+
+#     def hobby(self, hobby): # method can have other parameters with alongside self
+#         return f"{self.first} likes {hobby}"
+
+#     def is_senior(self):
+#         if self.age >= 65:
+#             return "Is Senior"
+#         return "Not Senior"
+
+#     def birthday(self):
+#         self.age += 1 
+#         return f"Happy {self.age}th {self.first}"
+
+# p1 = person("ahmed", "yousif", 70)
+# p2 = person("John", "Doe", 30)
+# print(p1.full_name())
+# print(p1.initails())
+# print(p1.hobby("football"))
+# print(p1.is_senior())
+# print(p1.birthday())
+# print(p2.full_name())
+# print(p2.initails())
+# print(p2.is_senior())
+# print(p2.birthday())
+
+# --------------------------------------------------------------------------------------------
+
+# $ Class Attributes $
+
+# class User:
+#     active_users = 0 # class attribute 
+
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self.age = age
+#         User.active_users += 1 # every time a user created, add 1 to active_users
+
+#     def log_out(self):
+#         User.active_users -= 1
+#         return f"{self.first} has logged out"
+
+#     def full_name(self):
+#         return f"{self.first} {self.last}"
+
+#     def initails(self):
+#         return f"{self.first[0].upper()}.{self.last[0].upper()}."
+
+#     def hobby(self, hobby):
+#         return f"{self.first} likes {hobby}"
+
+#     def is_senior(self):
+#         if self.age >= 65:
+#             return "Is Senior"
+#         return "Not Senior"
+
+#     def birthday(self):
+#         self.age += 1 
+#         return f"Happy {self.age}th {self.first}"
+
+# print(User.active_users) # 0
+# user1 = User("ahmed", "yousif", 70) # first user created
+# user2 = User("John", "Doe", 30) # second user created
+# print(User.active_users) # 2 active users now
+# print(user2.log_out())
+# print(User.active_users) # 1 active users cus user2 logged out
+
+# class Pet:
+#     allowed = ["Cat", "Dog", "Fish", "Rat"] # a list of allowed pets
+
+#     def __init__(self, name, species):
+#         if species not in Pet.allowed:
+#             raise ValueError(f"You can't have a {species} pet!")
+#         self.name = name
+#         self.species = species
+
+#     def set_species(self,species):
+#         if species not in Pet.allowed: # by using "allowed" as class attribute, you don't need to define it in every method, use it directly
+#             raise ValueError(f"You can't have a {species} pet!")
+#         self.species = species
+
+# cat = Pet("Blue", "Cat")
+# dog = Pet("Wyatt", "Dog")
+# # tiger = Pet("Tony", "Tiger") # ValueError
+# # cat.set_species("Lion") # ValueError cuz Lion not in allowed
+# cat.set_species("Fish")
+# print(cat.species) # cat now is a fish
+# print(Pet.allowed)
+# Pet.allowed.append("Pig") 
+# print(Pet.allowed) # the list is updated in every instance
+
+# ---------------------------------------------------------------------------------------------------
+
+# $ Class Methods $ # signify that what will work inside the method is not instance, it's a class
+
+# class User:
+#     active_users = 0
+#  
+#     @classmethod # use "@classmethod" to create class method, 
+#     def display_active_user(cls): # self here doesn't matter, you can use "cls" for class
+#         print(cls) # just to see what is cls
+#         return f"there are currently {cls.active_users} active users"
+
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self.age = age
+#         User.active_users += 1
+
+#     def log_out(self):
+#         User.active_users -= 1
+#         return f"{self.first} has logged out"
+
+#     def full_name(self):
+#         return f"{self.first} {self.last}"
+
+#     def initails(self):
+#         return f"{self.first[0].upper()}.{self.last[0].upper()}."
+
+#     def hobby(self, hobby):
+#         return f"{self.first} likes {hobby}"
+
+#     def is_senior(self):
+#         if self.age >= 65:
+#             return "Is Senior"
+#         return "Not Senior"
+
+#     def birthday(self):
+#         self.age += 1 
+#         return f"Happy {self.age}th {self.first}"
+
+# user1 = User("Joe", "Mark", 30)
+# print(User.display_active_user()) # you can use class name, cus @classmethod has nothing to do with instance
+# print(user1.display_active_user()) # you can still use it with instance
+
+# -advanced example
+
+# class User:
+#     active_users = 0 
+#     @classmethod
+#     def display_active_user(cls):
+#         return f"there are currently {cls.active_users} active users"
+
+#     @classmethod 
+#     def from_string(cls, data_str):
+#         first,last,age = data_str.split(",") # sometimes you deal with comma separated data, you need to handle it first before you create instance
+#         return cls(first, last, int(age))
+
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self.age = age
+#         User.active_users += 1
+
+#     def log_out(self):
+#         User.active_users -= 1
+#         return f"{self.first} has logged out"
+
+#     def full_name(self):
+#         return f"{self.first} {self.last}"
+
+#     def __repr__(self): # the instance representation method
+#         return f"{self.first}"
+
+#     def initails(self):
+#         return f"{self.first[0].upper()}.{self.last[0].upper()}."
+
+#     def hobby(self, hobby):
+#         return f"{self.first} likes {hobby}"
+
+#     def is_senior(self):
+#         if self.age >= 65:
+#             return "Is Senior"
+#         return "Not Senior"
+
+#     def birthday(self):
+#         self.age += 1 
+#         return f"Happy {self.age}th {self.first}"
+
+# joe = User.from_string("Joe,Mark,30") # passing arguments as one string separated by comma, not as 3 arguments "check it again"
+# print(joe.first)
+# print(joe.last)
+# print(joe.age)
+# print(joe.full_name())
+# print(joe)
+
+# ----------------------------------------------------------------------------------
+
+# Deck Of Cards Exercise
+
+# ------------------------------------------------------------------------------------
+
+# $ Inheritance $
+
+# class Animal:
+#     cool = True
+
+#     def make_sound(self, sound):
+#         return f"this animal says {sound}"
+
+# class Cat(Animal): # telling python this Cat class inherits the Animal class
+#     pass
+
+# c = Cat()
+# print(c.make_sound("graaoo")) # even if c is instance from Cat, but still can access methods of Animal class
+# print(c.cool)
+# print(isinstance(c, Cat)) # isinstance is a built in method that returns True or False, it tells if a method is instance of the class or not
+
+# --------------------------------------------------------------------------------------------
+
+# $ Properties $
+
+# class Human:
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self._age = age # underscore to show it's a private
+    
+#     @property
+#     def age(self):
+#         return self._age
+    
+#     @age.setter
+#     def age(self, value):
+#         if value >= 0:
+#             self._age = value
+#         else:
+#             raise ValueError("Age must not be negative!")
+    
+#     @property
+#     def full_name(self):
+#         return f"{self.first} {self.last}"
+    
+#     @full_name.setter
+#     def full_name(self, name):
+#         self.first, self.last = name.split(" ")
+    
+# jane = Human("Jane", "William", 40)
+# print(jane.age) # notice, parentheses weren't used "jane.age()" even though we called a method, this is the property
+# # jane.age = -40 # setting a negative value to age, using age.setter property.. should raise error
+# # print(jane.age)
+# print(jane.full_name)
+# jane.full_name = "Jack Norman"
+# print(jane.full_name) 
+# print(jane.__dict__)
+
+# --------------------------------------------------------------------------------------------
+
+# $ Introduction to super() $
+
+# class Animal:
+#     def __init__(self, name, species):
+#         self.name = name
+#         self.species = species
+    
+#     def __repr__(self):
+#         return f"{self.name} is a {self.species}"
+
+#     def make_sound(self, sound):
+#         return f"this animal says {sound}"
+
+# class Cat(Animal):
+#     def __init__(self, name, breed, toy):
+#         super().__init__(name, species = "Cat") # super refers to base class "parent class",, here, super refers to Animal class, so we dont need to add self.name in the subclass
+#         self.breed = breed
+#         self.toy = toy
+    
+#     def play(self):
+#         return f"{self.name} plays with {self.toy}"
+
+# class Dog(Animal):
+#     def __init__(self, name, breed, toy):
+#         super().__init__(name, species = "Dog") # here, we specified that every dog instance its species is "Dog"
+#         self.breed = breed
+#         self.toy = toy
+
+# c = Cat("Blue", "Scottish", "String")
+# print(c.__repr__())
+# print(c.play())
+# d = Dog("Wyatt", "German", "String")
+# print(d.__repr__())
+
+# -another example
+
+# class User:
+#     active_users = 0 
+
+#     @classmethod
+#     def display_active_user(cls):
+#         return f"there are currently {cls.active_users} active users"
+
+#     @classmethod 
+#     def from_string(cls, data_str):
+#         first,last,age = data_str.split(",")
+#         return cls(first, last, int(age))
+
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self.age = age
+#         User.active_users += 1
+
+#     def log_out(self):
+#         User.active_users -= 1
+#         return f"{self.first} has logged out"
+
+#     def full_name(self):
+#         return f"{self.first} {self.last}"
+
+#     def __repr__(self): 
+#         return f"{self.first}"
+
+#     def initails(self):
+#         return f"{self.first[0].upper()}.{self.last[0].upper()}."
+
+#     def hobby(self, hobby):
+#         return f"{self.first} likes {hobby}"
+
+#     def is_senior(self):
+#         if self.age >= 65:
+#             return "Is Senior"
+#         return "Not Senior"
+
+#     def birthday(self):
+#         self.age += 1 
+#         return f"Happy {self.age}th {self.first}"
+
+# class Moderator(User):
+#     total_mods = 0
+
+#     @classmethod
+#     def display_active_moderators(cls): # to see the total moderators
+#         return f"currantly {Moderator.total_mods} active moderators"
+
+#     def __init__(self, first, last, age, community):
+#         super().__init__(first, last, age)
+#         self.community = community
+#         Moderator.total_mods += 1 # adding active moderator in every instance creation
+    
+#     def remove_post(self):
+#         return f"{self.full_name()} removed post from {self.community} community"
+
+# class Visitor(User):
+#     def __init__(self, first, last, age, community):
+#         super().__init__(first, last, age)
+#         self.community = community
+
+# print(User.display_active_user()) # 0, no user yet
+# print(Moderator.display_active_moderators()) # 0
+# joe = Moderator("Joe", "Mark", 30, "Football")
+# print(User.display_active_user()) # 1, new user created
+# print(Moderator.display_active_moderators()) # 1, cus new moderator was created
+# print(joe.community)
+# print(joe.remove_post())
+# alex = Visitor("Alex", "Sancliar", 40, "Football")
+# print(User.display_active_user()) # 2, another user created
+# print(Moderator.display_active_moderators()) # 1, still 1 cuz alex is not a moderator
+# print(alex.community)
+# print(alex.remove_post()) # AttributeError, cus alex is website visitor who cant remove anything
+
+# --------------------------------------------------------------------------------------------------
+
+# $ Multiple Inheritance $
+
+# class Aquatic:
+#     def __init__(self,name):
+#         print("AQUATIC INIT!")
+#         self.name = name
+
+#     def swim(self):
+#         return f"{self.name} is swimming"
+
+#     def greet(self):
+#         return f"I am {self.name} of the sea!"
+
+# class Ambulatory:
+#     def __init__(self,name):
+#         print("AMBULATORY INIT!")
+#         self.name = name
+
+#     def walk(self):
+#         return f"{self.name} is walking"
+
+#     def greet(self):
+#         return f"I am {self.name} of the land!"
+
+# class Penguin(Ambulatory, Aquatic): # inherits both class
+#     def __init__(self,name):
+#         print("PENGUIN INIT!")
+#         Ambulatory.__init__(self,name=name)
+#         Aquatic.__init__(self, name=name)
+
+# jaws = Aquatic("Jaw")
+# lassie = Ambulatory("Lassie")
+# peni = Penguin("Peni")
+# print(peni.swim()) # from Aquatic class
+# print(peni.walk()) # from Ambulatory class
+# print(peni.greet()) # greet is in both class, which one to be called!?
+# print(f"Peni is instance of Aquatic: {isinstance(peni, Aquatic)}")
+# print(f"Peni is instance of Ambulatory: {isinstance(peni, Ambulatory)}")
+# print(f"Peni is instance of Penguin: {isinstance(peni, Penguin)}")
+
+# ------------------------------------------------------------------------------------
+
+# $ Method Resolution Order (MRO) $
+
+# class A:
+#     def do_something(self):
+#         return "Do something in: A"
+
+# class B(A):
+#     def do_something(self):
+#         return "Do something in: B"
+
+# class C(A):
+#     def do_something(self):
+#         return "Do something in: C"
+
+# class D(B,C):
+#     pass
+
+# d = D()
+# print(d.do_something()) # which do_something will be called!?
+# # print(D.__mro__) # the order of inheritance 
+# # print(D.mro()) # second way to show the order
+# # help(D) # third way to show the order
+
+# --------------------------------------------------------------------------------------------
+
+# $ Polymorphism $
+
+# class Animal:
+#     def speak(self):
+#         raise NotImplementedError ("Subclass needs to implement this method") # forcing every class to have it's own speak method
+
+# class Dog(Animal):
+#     def speak(self):
+#         return "woof"
+
+# class Cat(Animal):
+#     def speak(self):
+#         return "Mewo"
+
+# class Fish(Animal):
+#     pass
+
+# d = Dog()
+# print(d.speak()) # works fine
+# f = Fish()
+# print(f.speak()) # notice, speak wasn't defined in Fish class, so will go to Animal speak()
+
+# ---------------------------------------------------------------------------------------------
+
+#  $ Special Methods "__magic__ methods" $
+
+# class Human:
+#     def __init__(self, first, last, age):
+#         self.first = first
+#         self.last = last
+#         self.age = age
+
+#     def __repr__(self):
+#         return f"Human is {self.first} {self.last}"
+
+#     def __len__(self): 
+#         return self.age # len() now returns the age of human
+
+#     def __add__(self, other): # you can change the behaviour of normal addition
+#         if isinstance(other, Human): # check if other is instance of Human class
+#             return Human(first="Newborn", last=self.last, age=0)
+#         return "You can't add this!"
+    
+#     def __mul__(self,other): # changing the behaviour of multiplication
+#         if isinstance(other, int): # check if other is integer
+#             return [self for i in range(other)] 
+#         return "Can't multiply"
+        
+# mount = Human("Mason", "Mount", 21)
+# tomori = Human("Fikayo", "Tomori", 22)
+# print(mount)
+# print(len(mount))
+# print(mount + tomori)
+# print(mount + 2) # + sign will look for __add__
+# print(mount * 2) # * sign will look for __mul__
+
+# --------------------------------------------------------------------------------------
+
